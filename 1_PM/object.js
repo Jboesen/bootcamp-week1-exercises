@@ -10,6 +10,22 @@ const assert = require('assert')
  */
 
 const hasFalsyValue = obj => {
+  for (k in obj) {
+    if (typeof obj[k] !== 'object') {
+      // if the value is false
+      if (!obj[k])
+        return true
+    }
+    // type is object
+    else {
+      // recursively pass nested obj back
+      if (hasFalsyValue(obj[k])) {
+        // has a falsy value
+        return true
+      }
+    }
+  }
+  return false
 };
 
 const falsyObj = {
