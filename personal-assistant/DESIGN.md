@@ -1,0 +1,4 @@
+write a few paragraphs describing the component structure of your app and how data will transfer between those components. Diagrams are encouraged!
+    There will be three components: a search bar, a list of reminders, and an input form for new reminders. Of course, these aren't all immediately visible. The first component, the list of reminders, is actually going to be a list of buttons. When you double-click a reminder, it deletes. The second component, the search bar, is accessible by scrolling up (iOS homescreen style). That will contain the search form and the results. Finally, the third component will be the input. This will be an invisible form at the bottom that you can single-tap and begin typing in (and I guess to speed things up, I could also add a shortcut to get there)
+
+    Strings will be stored in the app. I will have ID's too. The reminders need to access no data, the create needs to access user input, and the search needs to access the reminders. 

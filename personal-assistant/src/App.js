@@ -1,10 +1,26 @@
 import React from 'react'
-// import COMPONENT from 'FILEPATH'
+import Greeting from './Containers/Greeting/index.js'
+import Reminders from './Containers/Reminders/index.js'
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+
 
 const App = () => (
-  <div>
-    Beep boop. Hi there, I&apos;m your personal assistant :D
-  </div>
+  <BrowserRouter>
+    <Switch>
+      <Route path="/reminders">
+        <Reminders />
+      </Route>
+      <Route path="/">
+        <Greeting />
+      </Route>
+    </Switch>
+  </BrowserRouter>
 )
+
+// const App = () => (
+//   <Greeting />
+// )
+
+
 
 export default App
